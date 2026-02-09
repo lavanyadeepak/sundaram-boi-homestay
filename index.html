@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Stay at Kumbakonam | Comfortable Stay by Sundaram Boi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f5ed;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #e65100;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .sanskrit-mantra {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #ffcdd2;
+            font-style: italic;
+        }
+        
+        .business-name {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #ffcdd2;
+        }
+        
+        .contact-info {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .contact-info i {
+            margin-right: 8px;
+        }
+        
+        /* Main Content Styles */
+        .intro-section {
+            background-color: #ffebee;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .intro-section h2 {
+            color: #e65100;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #ffcdd2;
+            padding-bottom: 10px;
+        }
+        
+        .announcement {
+            background-color: #fff3e0;
+            border-left: 5px solid #ff9800;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 5px;
+        }
+        
+        .announcement h3 {
+            color: #e65100;
+            margin-bottom: 10px;
+        }
+        
+        /* Product Table Styles */
+        .product-section {
+            margin: 40px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #e65100;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: #e65100;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .category-filter {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        
+        .filter-btn {
+            background-color: #ffebee;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            color: #e65100;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #e65100;
+            color: white;
+        }
+        
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .product-table th {
+            background-color: #e65100;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .product-table td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .product-table tr:hover {
+            background-color: #fff9f9;
+        }
+        
+        .product-name {
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .tamil-name {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 5px;
+        }
+        
+        .product-weight, .product-price {
+            text-align: center;
+        }
+        
+        .product-price {
+            color: #e65100;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Search Bar Styles */
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 25px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .search-wrapper {
+            position: relative;
+            flex-grow: 1;
+        }
+
+        #search-product {
+            width: 100%;
+            padding: 12px 20px;
+            padding-left: 45px;
+            border: 2px solid #ddd;
+            border-radius: 30px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        #search-product:focus {
+            border-color: #e65100;
+            outline: none;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+        
+        .print-btn {
+            background-color: #e65100;
+            color: white;
+            border: none;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+        
+        .print-btn:hover {
+            background-color: #bf360c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        /* Responsive Table Wrapper */
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        /* Order Form Styles */
+        .order-form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 40px;
+            border-top: 4px solid #e65100;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .order-btn {
+            background-color: #25D366; /* WhatsApp Green */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .order-btn:hover {
+            background-color: #128C7E;
+        }
+        
+        .qty-input {
+            width: 70px;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        .product-select {
+            text-align: center;
+        }
+        
+        .product-checkbox {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        
+        /* Order Summary Styles */
+        .order-summary {
+            background-color: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            border-left: 5px solid #1976d2;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .summary-total {
+            border-top: 1px solid #bbdefb;
+            padding-top: 10px;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: #e65100;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow: auto;
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            animation: slideIn 0.3s;
+        }
+        
+        @keyframes slideIn {
+            from {top: -50px; opacity: 0}
+            to {top: 0; opacity: 1}
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #aaa;
+            cursor: pointer;
+        }
+        
+        .close-modal:hover {
+            color: #333;
+        }
+        
+        .preview-title {
+            color: #e65100;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ffcdd2;
+            padding-bottom: 10px;
+        }
+        
+        .preview-details {
+            margin-bottom: 20px;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .preview-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        
+        .preview-table th {
+            text-align: left;
+            border-bottom: 2px solid #ddd;
+            padding: 8px;
+            color: #555;
+        }
+        
+        .preview-table td {
+            border-bottom: 1px solid #eee;
+            padding: 8px;
+        }
+        
+        .preview-total-row {
+            text-align: right;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e65100;
+            margin-top: 15px;
+        }
+        
+        /* Location Status Styles */
+        #location-status {
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        
+        #location-status.success {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            border: 1px solid #81c784;
+        }
+        
+        #location-status.error {
+            background-color: #ffebee;
+            color: #c62828;
+            border: 1px solid #ef5350;
+        }
+        
+        #location-status.loading {
+            background-color: #fff3e0;
+            color: #f57c00;
+            border: 1px solid #ffb74d;
+        }
+        
+        .location-btn {
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .location-btn:hover {
+            background-color: #1565c0;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        
+        .footer-section h3 {
+            color: #ffcdd2;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+            margin-top: 20px;
+            color: #aaa;
+        }
+        
+        .note {
+            background-color: #fffde7;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+            border-left: 4px solid #ffd600;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .business-name {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                font-size: 1.1rem;
+            }
+            
+            .product-table {
+                min-width: 600px; /* Ensures columns remain readable on small screens */
+            }
+            
+            .footer-section {
+                min-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .business-name {
+                font-size: 1.8rem;
+            }
+            
+            .sanskrit-mantra {
+                font-size: 1rem;
+            }
+            
+            .intro-section {
+                padding: 20px;
+            }
+            
+            .filter-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SFCK4V2J69"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-SFCK4V2J69');
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="sanskrit-mantra">Comfortable & Cost Effective Stay</div>
+            <h1 class="business-name">HOME STAY AT KUMBAKONAM</h1>
+            <div class="tagline">By Sundaram Boi</div>
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i> WhatsApp: +91 99406 81795
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <h2>Welcome to Our Homestay</h2>
+            <p>We are pleased to announce our new accommodation facility in Kumbakonam, scheduled to open in the <strong>first week of March 2026</strong>.</p>
+            <p>Our vision is to provide a <strong>comfortable and cost-effective stay</strong> for pilgrims and travelers visiting Kumbakonam for temple visits.</p>
+            <p>Located near Palakkarai, just 4-5 km from the Bus Stand and Railway Station.</p>
+        </section>
+        
+        <!-- Announcement Section -->
+        <section class="announcement">
+            <h3><i class="fas fa-bullhorn"></i> OPENING SOON</h3>
+            <p><strong>Opening March 2026!</strong> We are creating a WhatsApp group exclusively for booking rooms.</p>
+            <p><strong>Interested?</strong> Please message us on WhatsApp (+91 99406 81795) to be added to the group.</p>
+        </section>
+        
+        <!-- Products Section -->
+        <section class="product-section">
+            <h2 class="section-title">Accommodation Details</h2>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <div class="search-wrapper" style="display:none;">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" id="search-product" placeholder="Search...">
+                </div>
+                <button id="print-pdf-btn" class="print-btn" title="Download Details PDF">
+                    <i class="fas fa-file-pdf"></i>
+                </button>
+            </div>
+            
+            <!-- Category Filter -->
+            <div class="category-filter" style="display:none;">
+                <button class="filter-btn active" data-category="all">All Rooms</button>
+            </div>
+            
+            <!-- Products Table -->
+            <div class="table-responsive">
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th width="5%" class="product-select">Select</th>
+                        <th width="35%">Room Type / Facility</th>
+                        <th width="30%" class="product-price">Tariff (Per Day)</th>
+                        <th width="25%" class="product-qty">No. of Rooms</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table-body">
+                    <!-- Products will be dynamically inserted here -->
+                </tbody>
+            </table>
+            </div>
+            
+            <!-- Note -->
+            <div class="note">
+                <p><strong>Note:</strong> 1st Floor house with 3 bedrooms, hall, and kitchen. No AC as of now.</p>
+            </div>
+            
+            <!-- Order Form -->
+            <div class="order-form">
+                <h2 class="section-title">Booking Request</h2>
+                <div class="form-group">
+                    <label for="customer-name">Name</label>
+                    <input type="text" id="customer-name" class="form-control" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="customer-mobile">Mobile Number</label>
+                    <input type="tel" id="customer-mobile" class="form-control" placeholder="Enter your mobile number">
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">City / Coming From</label>
+                    <textarea id="customer-address" class="form-control" rows="2" placeholder="Where are you traveling from?"></textarea>
+                </div>
+                
+                <div class="form-group" style="display: flex; gap: 20px;">
+                    <div style="flex: 1;">
+                        <label for="checkin-date">Check-in Date</label>
+                        <input type="date" id="checkin-date" class="form-control">
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="num-days">Number of Days</label>
+                        <input type="number" id="num-days" class="form-control" value="1" min="1">
+                    </div>
+                </div>
+                
+                <!-- Location Capture Section -->
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="share-location" style="width: auto; margin-right: 8px;">
+                        Share my current location (Optional)
+                    </label>
+                    <button type="button" id="get-location-btn" class="location-btn" style="display: none;">
+                        <i class="fas fa-map-marker-alt"></i> Get My Location
+                    </button>
+                    <div id="location-status"></div>
+                    
+                    <!-- Hidden fields to store location data -->
+                    <input type="hidden" id="latitude" name="latitude">
+                    <input type="hidden" id="longitude" name="longitude">
+                    <input type="hidden" id="location-address" name="location-address">
+                </div>
+                
+                <!-- Live Summary -->
+                <div id="live-summary" class="order-summary" style="display: none;">
+                    <div class="summary-row">
+                        <span>Total Rooms:</span>
+                        <span id="summary-count">0</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Estimated Total:</span>
+                        <span id="summary-cost">₹0.00</span>
+                    </div>
+                </div>
+                
+                <button id="review-order-btn" class="order-btn">
+                    <i class="fas fa-list-alt"></i> Review Booking
+                </button>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Order Preview Modal -->
+    <div id="preview-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="preview-title">Booking Preview</h2>
+            
+            <div class="preview-details">
+                <p><strong>Name:</strong> <span id="preview-name"></span></p>
+                <p><strong>Mobile:</strong> <span id="preview-mobile"></span></p>
+                <p><strong>From:</strong> <span id="preview-address"></span></p>
+                <p><strong>Check-in:</strong> <span id="preview-date"></span> (<span id="preview-days"></span> days)</p>
+            </div>
+            
+            <div style="max-height: 300px; overflow-y: auto;">
+                <table class="preview-table">
+                    <thead>
+                        <tr>
+                            <th>Room Type</th>
+                            <th>Rooms</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="preview-items"></tbody>
+                </table>
+            </div>
+            
+            <div class="preview-total-row">
+                Total: <span id="preview-total-cost">₹0.00</span>
+            </div>
+            
+            <button id="confirm-order-btn" class="order-btn" style="margin-top: 20px;">
+                <i class="fab fa-whatsapp"></i> Send Booking Request
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>HOME STAY AT KUMBAKONAM</h3>
+                    <p>Comfortable and cost-effective accommodation for pilgrims visiting Kumbakonam temples.</p>
+                    <p>1st Floor house with 3 bedrooms, hall, and kitchen near Palakkarai.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-phone-alt"></i> <strong>WhatsApp:</strong> +91 99406 81795</p>
+                    <p><i class="fas fa-calendar-alt"></i> <strong>Opening:</strong> March 2026</p>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Near Palakkarai, Kumbakonam</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Thank You</h3>
+                    <p>We look forward to hosting you and making your temple visit comfortable.</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Home Stay at Kumbakonam by Sundaram Boi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PDF Generation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+
+    <script>
+
+        // Hardcoded product data for Homestay
+        var products = [
+            {
+                name: "Double Bedroom (Non-AC)",
+                tamilName: "இரட்டை படுக்கையறை",
+                weight: "Max 2 Adults",
+                price: "₹1200.00",
+                category: "rooms"
+            }
+        ];
+        
+        var cart = {}; // Object to store selected items
+        var currentCategory = "all"; // Track current category
+        var userLocation = null; // Store user's location
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProducts();
+            
+            // Set default date to today
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('checkin-date').value = today;
+        });
+
+        // Function to render products
+        function renderProducts() {
+            const searchTerm = document.getElementById('search-product').value.toLowerCase();
+            const tableBody = document.getElementById("product-table-body");
+            tableBody.innerHTML = "";
+            
+            const filteredProducts = products.filter(product => {
+                const matchesCategory = currentCategory === "all" || product.category === currentCategory;
+                const matchesSearch = product.name.toLowerCase().includes(searchTerm) || 
+                                      (product.tamilName && product.tamilName.toLowerCase().includes(searchTerm));
+                return matchesCategory && matchesSearch;
+            });
+            
+            filteredProducts.forEach(product => {
+                // Check if product is already in cart
+                const isChecked = cart[product.name] ? 'checked' : '';
+                const qty = cart[product.name] ? cart[product.name].quantity : 1;
+                
+                const row = document.createElement("tr");
+                // Store product data in dataset for easy retrieval
+                row.dataset.name = product.name;
+                row.dataset.price = product.price;
+                row.dataset.weight = product.weight;
+                
+                row.innerHTML = `
+                    <td class="product-select">
+                        <input type="checkbox" class="product-checkbox" ${isChecked}>
+                    </td>
+                    <td>
+                        <div class="product-name">${product.name} (${product.weight})</div>
+                        <div class="tamil-name">${product.tamilName} (${product.weight})</div>
+                    </td>
+                    <td class="product-price">${product.price}</td>
+                    <td class="product-qty">
+                        <input type="number" class="qty-input" value="${qty}" min="1">
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+            updateSummary();
+        }
+        
+        // Search Event Listener
+        document.getElementById('search-product').addEventListener('input', renderProducts);
+        
+        // Days input listener
+        document.getElementById('num-days').addEventListener('input', updateSummary);
+        
+        // Handle Print PDF
+        document.getElementById('print-pdf-btn').addEventListener('click', function() {
+            if (!products || products.length === 0) {
+                alert("Product data is loading. Please try again in a moment.");
+                return;
+            }
+            
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            
+            // Header
+            doc.setFontSize(18);
+            doc.setTextColor(230, 81, 0);
+            doc.text("HOME STAY AT KUMBAKONAM", 105, 15, { align: "center" });
+            
+            doc.setFontSize(12);
+            doc.setTextColor(51, 51, 51);
+            doc.text("Tariff Details", 105, 22, { align: "center" });
+            doc.setFontSize(10);
+            doc.text("Contact: +91 99406 81795", 105, 28, { align: "center" });
+            
+            // Table Data
+            const tableBody = products.map((p, index) => [
+                index + 1,
+                p.name,
+                p.weight,
+                p.price
+            ]);
+            
+            doc.autoTable({
+                head: [['S.No', 'Room Type', 'Capacity', 'Tariff']],
+                body: tableBody,
+                startY: 35,
+                theme: 'striped',
+                headStyles: { fillColor: [230, 81, 0] },
+                styles: { fontSize: 10 },
+                alternateRowStyles: { fillColor: [255, 245, 245] }
+            });
+            
+            doc.save("Kumbakonam_Homestay_Tariff.pdf");
+        });
+        
+        // Event delegation for table interactions (checkbox and quantity)
+        document.getElementById('product-table-body').addEventListener('change', function(e) {
+            const target = e.target;
+            const row = target.closest('tr');
+            if (!row) return;
+            
+            const name = row.dataset.name;
+            const price = row.dataset.price;
+            const weight = row.dataset.weight;
+            const checkbox = row.querySelector('.product-checkbox');
+            const qtyInput = row.querySelector('.qty-input');
+            
+            if (target.classList.contains('product-checkbox') || target.classList.contains('qty-input')) {
+                if (checkbox.checked) {
+                    cart[name] = {
+                        quantity: qtyInput.value,
+                        price: price,
+                        weight: weight
+                    };
+                } else {
+                    delete cart[name];
+                }
+            }
+            updateSummary();
+        });
+
+        // Helper to parse price string (e.g., "₹116.00" -> 116.00)
+        function parsePrice(priceStr) {
+            return parseFloat(priceStr.replace(/[^0-9.]/g, '')) || 0;
+        }
+
+        // Function to update live summary
+        function updateSummary() {
+            let totalQty = 0;
+            let totalCost = 0;
+            const numDays = parseInt(document.getElementById('num-days').value) || 1;
+            
+            for (let key in cart) {
+                const item = cart[key];
+                const qty = parseInt(item.quantity) || 0;
+                const price = parsePrice(item.price);
+                
+                totalQty += qty;
+                totalCost += (qty * price * numDays);
+            }
+            
+            document.getElementById('summary-count').textContent = totalQty;
+            document.getElementById('summary-cost').textContent = '₹' + totalCost.toFixed(2);
+            
+            // Show summary if items exist
+            const summaryDiv = document.getElementById('live-summary');
+            if (totalQty > 0) {
+                summaryDiv.style.display = 'block';
+            } else {
+                summaryDiv.style.display = 'none';
+            }
+        }
+
+        // ============ LOCATION CAPTURE FUNCTIONALITY ============
+        
+        // Show/hide location button when checkbox is toggled
+        document.getElementById('share-location').addEventListener('change', function() {
+            const getLocationBtn = document.getElementById('get-location-btn');
+            const locationStatus = document.getElementById('location-status');
+            
+            if (this.checked) {
+                getLocationBtn.style.display = 'inline-block';
+                locationStatus.innerHTML = '<i class="fas fa-info-circle"></i> Click the button below to share your location';
+                locationStatus.className = 'loading';
+            } else {
+                getLocationBtn.style.display = 'none';
+                locationStatus.innerHTML = '';
+                locationStatus.className = '';
+                userLocation = null;
+                document.getElementById('latitude').value = '';
+                document.getElementById('longitude').value = '';
+                document.getElementById('location-address').value = '';
+            }
+        });
+        
+        // Get location when button is clicked
+        document.getElementById('get-location-btn').addEventListener('click', function() {
+            const locationStatus = document.getElementById('location-status');
+            
+            if (!navigator.geolocation) {
+                locationStatus.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Geolocation is not supported by your browser';
+                locationStatus.className = 'error';
+                return;
+            }
+            
+            locationStatus.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Getting your location...';
+            locationStatus.className = 'loading';
+            
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+                    
+                    // Store location
+                    userLocation = { lat, lng };
+                    document.getElementById('latitude').value = lat;
+                    document.getElementById('longitude').value = lng;
+                    
+                    // Get address from coordinates (reverse geocoding)
+                    getAddressFromCoords(lat, lng);
+                    
+                    locationStatus.innerHTML = `<i class="fas fa-check-circle"></i> Location captured successfully!<br>
+                        <small>Lat: ${lat.toFixed(6)}, Lng: ${lng.toFixed(6)}</small><br>
+                        <a href="https://maps.google.com/?q=${lat},${lng}" target="_blank" style="color: #1976d2;">
+                            <i class="fas fa-map-marker-alt"></i> View on Google Maps
+                        </a>`;
+                    locationStatus.className = 'success';
+                },
+                function(error) {
+                    let errorMessage = '';
+                    switch(error.code) {
+                        case error.PERMISSION_DENIED:
+                            errorMessage = "Location access denied. Please enable location permissions in your browser.";
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            errorMessage = "Location information is unavailable.";
+                            break;
+                        case error.TIMEOUT:
+                            errorMessage = "Location request timed out.";
+                            break;
+                        default:
+                            errorMessage = "An unknown error occurred.";
+                    }
+                    locationStatus.innerHTML = `<i class="fas fa-exclamation-triangle"></i> ${errorMessage}`;
+                    locationStatus.className = 'error';
+                }
+            );
+        });
+        
+        // Function to get address from coordinates (optional - requires API key for production)
+        function getAddressFromCoords(lat, lng) {
+            // Using Nominatim (OpenStreetMap) for reverse geocoding - free, no API key needed
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.display_name) {
+                        document.getElementById('location-address').value = data.display_name;
+                        const locationStatus = document.getElementById('location-status');
+                        locationStatus.innerHTML += `<br><small><strong>Address:</strong> ${data.display_name}</small>`;
+                    }
+                })
+                .catch(error => {
+                    console.log('Could not fetch address:', error);
+                    // Not critical, so we don't show error to user
+                });
+        }
+
+        // Handle Review Order (Open Modal)
+        document.getElementById('review-order-btn').addEventListener('click', function() {
+            const name = document.getElementById('customer-name').value.trim();
+            const mobile = document.getElementById('customer-mobile').value.trim();
+            const address = document.getElementById('customer-address').value.trim();
+            const checkinDate = document.getElementById('checkin-date').value;
+            const numDays = document.getElementById('num-days').value;
+            
+            if (!name || !mobile) {
+                alert("Please fill in your Name and Mobile Number.");
+                return;
+            }
+            
+            const cartItems = Object.keys(cart);
+            if (cartItems.length === 0) {
+                alert("Please select a room.");
+                return;
+            }
+            
+            // Populate Modal
+            document.getElementById('preview-name').textContent = name;
+            document.getElementById('preview-mobile').textContent = mobile;
+            document.getElementById('preview-address').textContent = address || "Not provided";
+            document.getElementById('preview-date').textContent = checkinDate;
+            document.getElementById('preview-days').textContent = numDays;
+            
+            const previewItems = document.getElementById('preview-items');
+            previewItems.innerHTML = "";
+            let totalCost = 0;
+            
+            cartItems.forEach(itemName => {
+                const item = cart[itemName];
+                const priceVal = parsePrice(item.price);
+                const itemTotal = priceVal * item.quantity * numDays;
+                totalCost += itemTotal;
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${itemName}</td>
+                    <td>${item.quantity}</td>
+                    <td>₹${itemTotal.toFixed(2)}</td>
+                `;
+                previewItems.appendChild(row);
+            });
+            
+            document.getElementById('preview-total-cost').textContent = '₹' + totalCost.toFixed(2);
+            
+            // Show Modal
+            document.getElementById('preview-modal').style.display = "block";
+        });
+
+        // Close Modal Logic
+        document.querySelector('.close-modal').addEventListener('click', function() {
+            document.getElementById('preview-modal').style.display = "none";
+        });
+        
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('preview-modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        });
+
+        // Handle Final WhatsApp Submission
+        document.getElementById('confirm-order-btn').addEventListener('click', function() {
+            const name = document.getElementById('customer-name').value.trim();
+            const mobile = document.getElementById('customer-mobile').value.trim();
+            const address = document.getElementById('customer-address').value.trim();
+            const checkinDate = document.getElementById('checkin-date').value;
+            const numDays = document.getElementById('num-days').value;
+            const cartItems = Object.keys(cart);
+            
+            let message = `*Booking Request - Home Stay at Kumbakonam*\n\n`;
+            message += `*Name:* ${name}\n`;
+            message += `*Mobile:* ${mobile}\n`;
+            message += `*Coming From:* ${address}\n`;
+            message += `*Check-in Date:* ${checkinDate}\n`;
+            message += `*Duration:* ${numDays} Days\n`;
+            
+            // Add location if captured
+            if (userLocation) {
+                const lat = document.getElementById('latitude').value;
+                const lng = document.getElementById('longitude').value;
+                const locationAddr = document.getElementById('location-address').value;
+                
+                message += `\n*📍 Location Details:*\n`;
+                message += `Coordinates: ${lat}, ${lng}\n`;
+                message += `Google Maps: https://maps.google.com/?q=${lat},${lng}\n`;
+                if (locationAddr) {
+                    message += `Address: ${locationAddr}\n`;
+                }
+            }
+            
+            message += `\n*Booking Details:*\n`;
+            
+            let totalCost = 0;
+            cartItems.forEach((itemName, index) => {
+                const item = cart[itemName];
+                const priceVal = parsePrice(item.price);
+                const itemTotal = priceVal * item.quantity * numDays;
+                totalCost += itemTotal;
+                message += `${index + 1}. ${itemName} - Rooms: ${item.quantity} - ₹${itemTotal.toFixed(2)}\n`;
+            });
+            
+            message += `\n*Total Estimated Cost: ₹${totalCost.toFixed(2)}*`;
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/919940681795?text=${encodedMessage}`;
+            
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // Add event listeners to filter buttons
+        document.querySelectorAll(".filter-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                // Remove active class from all buttons
+                document.querySelectorAll(".filter-btn").forEach(btn => {
+                    btn.classList.remove("active");
+                });
+                
+                // Add active class to clicked button
+                this.classList.add("active");
+                
+                // Get category and render products
+                currentCategory = this.getAttribute("data-category");
+                renderProducts();
+            });
+        });
+    </script>
+</body>
+</html>
